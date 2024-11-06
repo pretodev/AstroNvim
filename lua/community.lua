@@ -8,6 +8,10 @@ return {
   -- docker
   { import = "astrocommunity.docker.lazydocker" },
 
+  -- editing support
+  { import = "astrocommunity.editing-support.vim-move" },
+  { import = "astrocommunity.editing-support.vim-visual-multi" },
+
   -- packs
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.docker" },
@@ -21,6 +25,9 @@ return {
   { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.yaml" },
+
+  -- recipes
+  { import = "astrocommunity.recipes.disable-tabline" },
 
   -- utility
   { import = "astrocommunity.utility.mason-tool-installer-nvim" },

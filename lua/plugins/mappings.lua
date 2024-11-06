@@ -4,8 +4,18 @@ return {
     mappings = {
       n = {
         -- navigate buffer tabs
-        ["<tab>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        ["<S-tab>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        -- ["<tab>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        -- ["<S-tab>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+
+        ["<Leader>b"] = {
+          function()
+            require("telescope.builtin").buffers {
+              sort_lastused = true,
+              ignore_current_buffer = true,
+            }
+          end,
+          desc = "Buffers",
+        },
 
         ["<Leader>Y"] = { 'gg"+yG', desc = "Copy buffer content" },
 
