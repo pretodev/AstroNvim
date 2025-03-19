@@ -5,6 +5,9 @@ return {
   -- comment
   { import = "astrocommunity.comment.mini-comment" },
 
+  -- completion
+  { import = "astrocommunity.completion.avante-nvim" },
+
   -- docker
   { import = "astrocommunity.docker.lazydocker" },
 
@@ -14,6 +17,7 @@ return {
 
   -- packs
   { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.dart" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.html-css" },
