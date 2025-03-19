@@ -3,9 +3,12 @@ return {
   opts = {
     mappings = {
       n = {
-        -- navigate buffer tabs
-        -- ["<tab>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        -- ["<S-tab>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        ["<tab>"] = { function() require("astrocore.buffer").prev() end, desc = "Next buffer" },
+
+        ["<Leader><Leader>"] = {
+          function() require("telescope.builtin").find_files() end,
+          desc = "Find Files",
+        },
 
         ["<Leader>b"] = {
           function()
