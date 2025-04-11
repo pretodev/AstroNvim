@@ -17,7 +17,6 @@ return {
 
   -- packs
   { import = "astrocommunity.pack.bash" },
-  { import = "astrocommunity.pack.dart" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.html-css" },
