@@ -3,8 +3,6 @@ return {
   opts = {
     mappings = {
       n = {
-        ["<tab>"] = { function() require("astrocore.buffer").prev() end, desc = "Next buffer" },
-
         ["<Leader><Leader>"] = {
           function() require("telescope.builtin").find_files() end,
           desc = "Find Files",
