@@ -1,6 +1,25 @@
 return {
   "AstroNvim/astrocore",
+
+  --@type AstroCoreOpts
   opts = {
+    features = {
+      inlay_hints = true, -- enable inlay hints globally on startup
+    },
+
+    options = {
+      opt = {
+        scrolloff = 8,
+        tabstop = 2,
+        softtabstop = 2,
+        shiftwidth = 2,
+        expandtab = true,
+        smartindent = true,
+        foldmethod = "expr",
+        wrap = true,
+      },
+    },
+
     mappings = {
       n = {
         ["<Leader><Leader>"] = {
@@ -54,17 +73,19 @@ return {
           silent = true,
         },
 
+        ["<C-l>"] = { "<Right>", noremap = true, silent = true },
         ["<C-k>"] = { "<Up>", noremap = true, silent = true },
         ["<C-j>"] = { "<Down>", noremap = true, silent = true },
         ["<C-h>"] = { "<Left>", noremap = true, silent = true },
-        ["<C-l>"] = { "<Right>", noremap = true, silent = true },
       },
 
       v = {
+        -- Move selected line(s) down
         ["J"] = { ":m '>+1<CR>gv=gv", noremap = true, silent = true },
       },
 
       x = {
+        -- Move selected line(s) up
         ["K"] = { ":m '<-2<CR>gv=gv", noremap = true, silent = true },
       },
     },
