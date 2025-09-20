@@ -1,12 +1,23 @@
+
+---@type LazySpec
 return {
   "AstroNvim/astrocore",
-
-  --@type AstroCoreOpts
+  ---@type AstroCoreOpts
   opts = {
     features = {
       inlay_hints = true, -- enable inlay hints globally on startup
     },
-
+    filetypes = {
+      extension = {
+        foo = "fooscript",
+      },
+      filename = {
+        [".foorc"] = "fooscript",
+      },
+      pattern = {
+        [".*/etc/foo/.*"] = "fooscript",
+      },
+    },
     options = {
       opt = {
         scrolloff = 8,
@@ -19,7 +30,6 @@ return {
         wrap = true,
       },
     },
-
     mappings = {
       n = {
         ["<Leader><Leader>"] = {
